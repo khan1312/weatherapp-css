@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f172a, #1e3a8a, #38bdf8);
+}
+
+.mainContainter {
+    max-width: 900px;
+    height: 100vh;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.mainContainter h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.mainContainter p {
+    font-size: 20px;
+    color: #fff;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+
+.mainContainter input {
+    width: 320px;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    font-size: 16px;
+
+}
+
+.mainContainter button {
+    padding: 14px 24px;
+    border: none;
+    border-radius: 50px;
+    background: #0ea5e9;
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.weatherSection {
+    margin-top: 30px;
+}
+
+.weartercard {
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, .12);
+    border: 1px solid rgba(255, 255, 255, .15);
+    border-radius: 25px;
+    padding: 30px;
+    color: #fff;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .25);
+}
+
+.topcardcontent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.location {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+.date{
+   font-size: 14px;
+    font-weight: 500; 
+    line-height: 30px; 
+}
+.temp {
+    font-size: 65px;
+    font-weight: bold;
+    line-height: 1;
+    margin: 10px 0;
+}
+
+.condition {
+    font-size: 18px;
+    text-transform: capitalize;
+    opacity: .9;
+}
+
+.weather-icon {
+    width: 140px;
+}
+
+.startcard {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+.start{
+        background: rgba(255, 255, 255, .08);
+    padding: 20px;
+    border-radius: 18px;
+    text-align: center;
+}

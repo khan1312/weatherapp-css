@@ -1,0 +1,328 @@
+
+/* ===== Global Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a, #38bdf8);
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+/* ===== Main Container ===== */
+.mainContainter {
+    width: 100%;
+    max-width: 1000px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 50px 25px;
+    text-align: center;
+}
+
+/* ===== Heading ===== */
+.mainContainter h1 {
+    font-size: clamp(26px, 4vw, 42px);
+    margin-bottom: 10px;
+    color: #fff;
+    line-height: 1.3;
+}
+
+.mainContainter p {
+    font-size: clamp(15px, 2vw, 20px);
+    color: #fff;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* ===== Search Input ===== */
+.mainContainter input {
+    width: 100%;
+    max-width: 320px;
+    min-width: 0;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    font-size: 16px;
+    background: #fff;
+    color: #0f172a;
+}
+
+/* ===== Search Button ===== */
+.mainContainter button {
+    padding: 14px 24px;
+    border: none;
+    border-radius: 50px;
+    background: #0ea5e9;
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.mainContainter button:hover {
+    background: #0284c7;
+}
+
+/* ===== Weather Section ===== */
+.weatherSection {
+    width: 100%;
+    margin-top: 30px;
+}
+
+/* ===== Weather Card ===== */
+.weartercard {
+    width: 100%;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 25px;
+    padding: 30px;
+    color: #fff;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== Top Weather Content ===== */
+.topcardcontent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: left;
+}
+
+.location {
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+.temp {
+    font-size: clamp(42px, 7vw, 72px);
+    font-weight: bold;
+    line-height: 1.1;
+    margin: 10px 0;
+}
+
+.condition {
+    font-size: clamp(15px, 2vw, 18px);
+    text-transform: capitalize;
+    opacity: 0.9;
+}
+
+.weather-icon {
+    width: 140px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* ===== Weather Details Grid ===== */
+.startcard {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.start {
+    min-width: 0;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 20px;
+    border-radius: 18px;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.start h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.start p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/* ===== Laptop: 1024px and below ===== */
+@media (max-width: 1024px) {
+    .mainContainter {
+        max-width: 900px;
+        padding: 40px 25px;
+    }
+
+    .weartercard {
+        padding: 25px;
+    }
+
+    .startcard {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+}
+
+/* ===== Tablet: 768px and below ===== */
+@media (max-width: 768px) {
+    .mainContainter {
+        padding: 35px 20px;
+    }
+
+    .mainContainter h1 {
+        font-size: 32px;
+    }
+
+    .topcardcontent {
+        gap: 15px;
+    }
+
+    .weather-icon {
+        width: 110px;
+    }
+
+    .weartercard {
+        padding: 22px;
+        border-radius: 20px;
+    }
+
+    .start {
+        padding: 18px 12px;
+    }
+}
+
+/* ===== Mobile: 576px and below ===== */
+@media (max-width: 576px) {
+    .mainContainter {
+        padding: 25px 15px;
+    }
+
+    .mainContainter h1 {
+        font-size: 28px;
+    }
+
+    .mainContainter p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .mainContainter input {
+        max-width: 100%;
+        padding: 13px 18px;
+        font-size: 15px;
+    }
+
+    .mainContainter button {
+        width: 100%;
+        max-width: 320px;
+        margin-top: 10px;
+        padding: 13px 20px;
+    }
+
+    .weatherSection {
+        margin-top: 22px;
+    }
+
+    .weartercard {
+        padding: 18px;
+        border-radius: 18px;
+    }
+
+    .topcardcontent {
+        justify-content: center;
+        text-align: center;
+        gap: 12px;
+    }
+
+    .location {
+        font-size: 24px;
+    }
+
+    .temp {
+        font-size: 52px;
+    }
+
+    .condition {
+        font-size: 16px;
+    }
+
+    .weather-icon {
+        width: 100px;
+    }
+
+    .startcard {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin-top: 22px;
+    }
+
+    .start {
+        padding: 15px 8px;
+        border-radius: 14px;
+    }
+
+    .start h3 {
+        font-size: 14px;
+    }
+
+    .start p {
+        font-size: 13px;
+    }
+}
+
+/* ===== Small Mobile: 360px and below ===== */
+@media (max-width: 360px) {
+    .mainContainter {
+        padding: 20px 10px;
+    }
+
+    .mainContainter h1 {
+        font-size: 24px;
+    }
+
+    .weartercard {
+        padding: 14px;
+    }
+
+    .location {
+        font-size: 21px;
+    }
+
+    .temp {
+        font-size: 44px;
+    }
+
+    .weather-icon {
+        width: 80px;
+    }
+
+    .startcard {
+        gap: 8px;
+    }
+
+    .start {
+        padding: 12px 6px;
+    }
+
+    .start h3 {
+        font-size: 12px;
+    }
+
+    .start p {
+        font-size: 12px;
+    }
+}
